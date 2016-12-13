@@ -19,13 +19,13 @@ Only integer inputs are allowed.
 
 #### Cost
 
-The cost of the first five points (above 30) are one each.
+The cost of the first five points (above 30) is one each.
 
-The cost of the next five points (above 35) are two each.
+The cost of the next five points (above 35) is two each.
 
-The cost of the next five points (above 40) are three each.
+The cost of the next five points (above 40) is three each.
 
-The cost of the next five points (above 45) are four each.
+The cost of the next five points (above 45) is four each.
 
 Chapter (equivalent to race bonuses in most other systems) fields have no associated cost but still are added to the total.
 
