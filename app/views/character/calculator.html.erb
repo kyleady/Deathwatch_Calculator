@@ -1,0 +1,71 @@
+<%= javascript_tag do %>
+  window.stats = <%= raw @stats.to_json %>
+<% end %>
+<h1>Deathwatch Characteristic Buy</h1>
+<hr>
+<p>Remaining
+  <%= number_field_tag "remaining", 65, disabled: true %>
+</p>
+
+<div class="names block">
+  <br><br>
+<% @stats.each do |stat| %>
+  <p class="label">
+  <%= stat %>
+  </p>
+<% end %>
+</div>
+
+<div class="bases block">
+  <p>Base</p>
+<% @stats.each do |stat| %>
+  <p>
+  <%= number_field_tag "#{stat}_base", 40, min: 30, max: 50, step: 1, class: "base"  %>
+  </p>
+<% end %>
+</div>
+
+<div class="additions block">
+  <br><br>
+<% @stats.each do |stat| %>
+  <p class="label">
+  +
+  </p>
+<% end %>
+</div>
+
+<div class="chapters block">
+  <p>Chapter</p>
+<% @stats.each do |stat| %>
+  <p>
+  <%= number_field_tag "#{stat}_chapter", 0, min: -10, max: 10, step: 1, class: "chapter"  %>
+  </p>
+<% end %>
+</div>
+
+<div class="equals block">
+  <br><br>
+<% @stats.each do |stat| %>
+  <p class="label">
+  =
+  </p>
+<% end %>
+</div>
+
+<div class="totals block">
+  <p>Total</p>
+<% @stats.each do |stat| %>
+  <p>
+  <%= number_field_tag "#{stat}_total", 40, disabled: true, class: "total" %>
+  </p>
+<% end %>
+</div>
+
+<div class="costs block">
+  <p>Cost</p>
+<% @stats.each do |stat| %>
+  <p>
+  <%= number_field_tag "#{stat}_cost", 15, disabled: true, class: "cost" %>
+  </p>
+<% end %>
+</div>
